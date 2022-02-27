@@ -9,7 +9,7 @@ class CircularSliderApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slider1: 10,
+      slider1: 0,
     };
   }
   _renderItem({item}) {
@@ -27,6 +27,7 @@ class CircularSliderApp extends Component {
             renderItem={this._renderItem}
             sliderWidth={400}
             itemWidth={300}
+            onSnapToItem={index => this.setState({slider1: index})}
           />
         </View>
 

@@ -10,6 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "d3-interpolate": "^3.0.1",
+    "lodash": "^4.17.21",
+    "lodash.range": "^3.2.0",
+    "prop-types": "^15.8.1",
     "react": "17.0.2",
     "react-native": "0.67.3",
     "react-native-circular-slider": "^1.0.1",

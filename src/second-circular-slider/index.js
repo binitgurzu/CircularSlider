@@ -1,7 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
-
-import BedTime from './BedTime';
+import {SafeAreaView, Text, StyleSheet} from 'react-native';
 
 const STYLES = StyleSheet.create({
   container: {
@@ -9,12 +7,12 @@ const STYLES = StyleSheet.create({
   },
 });
 
-const App = () => {
+const BedTimeSlider = () => {
   return (
     <SafeAreaView style={STYLES.container}>
-      <BedTime />
+      <Text>Hello</Text>
     </SafeAreaView>
   );
 };
 
-export default App;
+export default BedTimeSlider;

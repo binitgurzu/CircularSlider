@@ -61,11 +61,7 @@ class CircularSlider extends Component {
       startCoord = this.polarToCartesian(0),
       endCoord = this.polarToCartesian(value);
     return (
-      <Svg
-        onLayout={this.onLayout}
-        width={width}
-        height={height}
-        {...this._panResponder.panHandlers}>
+      <Svg onLayout={this.onLayout} width={width} height={height}>
         <Circle
           cx={cx}
           cy={cy}
@@ -82,7 +78,10 @@ class CircularSlider extends Component {
             value > 180 ? 1 : 0
           } 1 ${endCoord.x} ${endCoord.y}`}
         />
-        <G x={endCoord.x - 7.5} y={endCoord.y - 7.5}>
+        <G
+          {...this._panResponder.panHandlers}
+          x={endCoord.x - 7.5}
+          y={endCoord.y - 7.5}>
           <Circle cx={7.5} cy={7.5} r={20} fill={meterColor} />
           <Text
             key={value + ''}

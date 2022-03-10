@@ -44,7 +44,7 @@ class CircularSliderApp extends Component {
                 value={this.state.slider1}
                 onValueChange={value =>
                   this.setState({slider1: value}, () => {
-                    this._carousel.snapToItem(value);
+                    //  this._carousel.snapToItem(value);
                   })
                 }
               />

@@ -35,6 +35,23 @@ class CircularSlider extends Component {
     );
   }
   handlePanResponderMove({nativeEvent: {locationX, locationY}}) {
+    const {cx, cy} = this.state;
+    const {value} = this.props;
+    const val = Math.round(
+      Math.atan((locationY - cy) / (locationX - cx)) / (Math.PI / 180) +
+        (locationX > cx ? 270 : 90),
+    );
+
+    if (value >= 0 && value <= 180 && val <= 360 && val >= 250) {
+      return;
+    }
+
+    if (value <= 360 && value >= 220 && val >= 0 && val <= 150) {
+      return;
+    }
+
+    console.log('inside if block');
+
     this.props.onValueChange(this.cartesianToPolar(locationX, locationY));
   }
   render() {

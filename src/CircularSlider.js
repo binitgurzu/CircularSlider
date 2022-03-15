@@ -42,15 +42,13 @@ class CircularSlider extends Component {
         (locationX > cx ? 270 : 90),
     );
 
-    if (value >= 0 && value <= 180 && val <= 360 && val >= 250) {
+    if (value > 0 && value <= 180 && val <= 360 && val >= 250) {
       return;
     }
 
-    if (value <= 360 && value >= 220 && val >= 0 && val <= 150) {
+    if (value < 360 && value >= 220 && val >= 0 && val <= 150) {
       return;
     }
-
-    console.log('inside if block');
 
     this.props.onValueChange(this.cartesianToPolar(locationX, locationY));
   }

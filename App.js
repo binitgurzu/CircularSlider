@@ -9,7 +9,7 @@ class CircularSliderApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slider1: 0,
+      slider1: 1,
     };
   }
   _renderItem({item}) {

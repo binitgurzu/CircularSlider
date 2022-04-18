@@ -252,7 +252,7 @@ export default class CircularSlider extends PureComponent {
               r={radius}
               strokeWidth={strokeWidth}
               fill="transparent"
-              stroke={bgCircleColor}
+              stroke={'#345772'}
             />
             {showClockFace && (
               <ClockFace r={radius - strokeWidth / 2} stroke={clockFaceColor} />

@@ -91,8 +91,8 @@ export default class Bedtime extends Component {
           segments={5}
           strokeWidth={40}
           radius={145}
-          gradientColorFrom="#ff9800"
-          gradientColorTo="#ffcf00"
+          gradientColorFrom="#84C53F"
+          gradientColorTo="#4C7A91"
           showClockFace
           clockFaceColor="#9d9d9d"
           bgCircleColor="#171717"

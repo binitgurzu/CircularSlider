@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   time: {
-    color: 'white',
+    color: 'red',
     fontSize: 35,
     fontWeight: '300',
   },

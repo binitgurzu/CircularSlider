@@ -80,59 +80,33 @@ export default class Bedtime extends Component {
 
     return (
       <View style={styles.container}>
-        <View style={styles.timeContainer}>
-          <View style={styles.time}>
-            <View style={styles.timeHeader}>
-              <Svg height={16} width={16}>
-                <G fill="#ff9800">{BEDTIME_ICON}</G>
-              </Svg>
-              <Text style={styles.bedtimeText}>Bedtime</Text>
-            </View>
-            <Text style={styles.timeValue}>
-              {bedtime.h}:{padMinutes(bedtime.m)}
-            </Text>
-          </View>
-          <View style={styles.time}>
-            <View style={styles.timeHeader}>
-              <Svg height={16} width={16}>
-                <G fill="#ffcf00">{WAKE_ICON}</G>
-              </Svg>
-              <Text style={styles.wakeText}>Wake</Text>
-            </View>
-            <Text style={styles.timeValue}>
-              {waketime.h}:{padMinutes(waketime.m)}
-            </Text>
-          </View>
-        </View>
-        <View>
-          <TimerText
-            style={styles.sleepTimeContainer}
-            minutesLong={calculateMinutesFromAngle(angleLength)}
-          />
-          <CircularSlider
-            startAngle={startAngle}
-            angleLength={angleLength}
-            onUpdate={this.onUpdate}
-            segments={5}
-            strokeWidth={40}
-            radius={145}
-            gradientColorFrom="#ff9800"
-            gradientColorTo="#ffcf00"
-            showClockFace
-            clockFaceColor="#9d9d9d"
-            bgCircleColor="#171717"
-            stopIcon={
-              <G scale="1.1" transform={{translate: '-8, -8'}}>
-                {WAKE_ICON}
-              </G>
-            }
-            startIcon={
-              <G scale="1.1" transform={{translate: '-8, -8'}}>
-                {BEDTIME_ICON}
-              </G>
-            }
-          />
-        </View>
+        <TimerText
+          style={styles.sleepTimeContainer}
+          minutesLong={calculateMinutesFromAngle(angleLength)}
+        />
+        <CircularSlider
+          startAngle={startAngle}
+          angleLength={angleLength}
+          onUpdate={this.onUpdate}
+          segments={5}
+          strokeWidth={40}
+          radius={145}
+          gradientColorFrom="#ff9800"
+          gradientColorTo="#ffcf00"
+          showClockFace
+          clockFaceColor="#9d9d9d"
+          bgCircleColor="#171717"
+          stopIcon={
+            <G scale="1.1" transform={{translate: '-8, -8'}}>
+              {WAKE_ICON}
+            </G>
+          }
+          startIcon={
+            <G scale="1.1" transform={{translate: '-8, -8'}}>
+              {BEDTIME_ICON}
+            </G>
+          }
+        />
       </View>
     );
   }

@@ -62,7 +62,7 @@ function calculateArcCircle(
 function getGradientId(index) {
   return `gradient${index}`;
 }
- 
+
 export default class CircularSlider extends PureComponent {
   static propTypes = {
     onUpdate: PropTypes.func.isRequired,
@@ -254,9 +254,7 @@ export default class CircularSlider extends PureComponent {
               fill="transparent"
               stroke={'#345772'}
             />
-            {showClockFace && (
-              <ClockFace r={radius - strokeWidth / 2} stroke={clockFaceColor} />
-            )}
+            {showClockFace && <ClockFace r={radius} stroke={strokeWidth} />}
             {range(segments).map(i => {
               const {fromX, fromY, toX, toY} = calculateArcCircle(
                 i,

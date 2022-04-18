@@ -282,10 +282,6 @@ export default class CircularSlider extends PureComponent {
               );
             })}
 
-            {/*
-              ##### Stop Icon
-            */}
-
             <G
               fill={gradientColorTo}
               transform={{translate: `${stop.toX}, ${stop.toY}`}}
@@ -295,11 +291,9 @@ export default class CircularSlider extends PureComponent {
               {...this._wakePanResponder.panHandlers}>
               <Circle
                 r={(strokeWidth - 1) / 2}
-                fill={bgCircleColor}
-                stroke={gradientColorTo}
+                fill={'#82C73E'}
                 strokeWidth="1"
               />
-              {stopIcon}
             </G>
           </G>
         </Svg>

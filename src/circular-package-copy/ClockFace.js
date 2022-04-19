@@ -15,7 +15,11 @@ export default class ClockFace extends PureComponent {
     return (
       <G>
         <G>
-          <Circle cx="0" cy="0" r={r - stroke / 2} fill="pink" />
+          <Circle cx="0" cy="0" r={r - stroke / 2} fill="#669BBA">
+            <Text fill={stroke} fontSize="16" textAnchor="middle">
+              Hello
+            </Text>
+          </Circle>
           {/* {range(12).map((h, i) => (
             <Text
               key={i}

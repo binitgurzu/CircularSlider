@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {PanResponder, View} from 'react-native';
+import {PanResponder, View, Dimensions} from 'react-native';
 import Svg, {
   Circle,
   G,
@@ -200,13 +200,21 @@ export default class CircularSlider extends PureComponent {
       angleLength,
     );
 
+    let val = 300;
+
     return (
       <View
-        style={{width: containerWidth, height: containerWidth}}
+        style={{
+          width: Dimensions.get('window').width,
+          height: Dimensions.get('window').height / 2,
+          justifyContent:'center',
+          alignItems:'center',
+        }}
         onLayout={this.onLayout}>
         <Svg
-          height={containerWidth}
-          width={containerWidth}
+          height={300}
+          width={300}
+          viewBox={`-10 -10 ${val} ${val}`}
           ref={circle => (this._circle = circle)}>
           <Defs>
             {range(segments).map(i => {
@@ -287,11 +295,7 @@ export default class CircularSlider extends PureComponent {
                 this.setState({angleLength: angleLength + Math.PI / 2})
               }
               {...this._wakePanResponder.panHandlers}>
-              <Circle
-                r={(strokeWidth - 1) / 2}
-                fill={'#82C73E'}
-                strokeWidth="1"
-              />
+              <Circle r={strokeWidth - 5} fill={'#82C73E'} strokeWidth="1" />
             </G>
           </G>
         </Svg>

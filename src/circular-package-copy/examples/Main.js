@@ -79,31 +79,29 @@ export default class Bedtime extends Component {
     );
 
     return (
-      <View style={styles.container}>
-        <CircularSlider
-          startAngle={startAngle}
-          angleLength={angleLength}
-          onUpdate={this.onUpdate}
-          segments={5}
-          strokeWidth={40}
-          radius={145}
-          gradientColorFrom="#84C53F"
-          gradientColorTo="#4C7A91"
-          showClockFace
-          clockFaceColor="#9d9d9d"
-          bgCircleColor="#171717"
-          stopIcon={
-            <G scale="1.1" transform={{translate: '-8, -8'}}>
-              {WAKE_ICON}
-            </G>
-          }
-          startIcon={
-            <G scale="1.1" transform={{translate: '-8, -8'}}>
-              {BEDTIME_ICON}
-            </G>
-          }
-        />
-      </View>
+      <CircularSlider
+        startAngle={startAngle}
+        angleLength={angleLength}
+        onUpdate={this.onUpdate}
+        segments={5}
+        strokeWidth={30}
+        radius={120}
+        gradientColorFrom="#84C53F"
+        gradientColorTo="#4C7A91"
+        showClockFace
+        clockFaceColor="#9d9d9d"
+        bgCircleColor="#171717"
+        stopIcon={
+          <G scale="1.1" transform={{translate: '-8, -8'}}>
+            {WAKE_ICON}
+          </G>
+        }
+        startIcon={
+          <G scale="1.1" transform={{translate: '-8, -8'}}>
+            {BEDTIME_ICON}
+          </G>
+        }
+      />
     );
   }
 }
@@ -111,7 +109,6 @@ export default class Bedtime extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff',
   },

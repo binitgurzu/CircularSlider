@@ -80,10 +80,6 @@ export default class Bedtime extends Component {
 
     return (
       <View style={styles.container}>
-        <TimerText
-          style={styles.sleepTimeContainer}
-          minutesLong={calculateMinutesFromAngle(angleLength)}
-        />
         <CircularSlider
           startAngle={startAngle}
           angleLength={angleLength}

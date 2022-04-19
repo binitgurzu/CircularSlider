@@ -21,7 +21,6 @@ export default class ClockFace extends PureComponent {
 
   render() {
     const {r, stroke} = this.props;
-
     return (
       <G>
         <G>
@@ -31,28 +30,26 @@ export default class ClockFace extends PureComponent {
               <Stop offset="1" stopColor="#125176" stopOpacity="1" />
             </LinearGradient>
           </Defs>
-          <Circle cx="0" cy="0" r={r - stroke / 2} fill="url(#grad)">
-            <Text fill={stroke} fontSize="16" textAnchor="middle">
-              Hello
-            </Text>
-          </Circle>
-          {/* {range(12).map((h, i) => (
-            <Text
-              key={i}
-              fill={stroke}
-              fontSize="16"
-              textAnchor="middle"
-              x={
-                textRadius *
-                Math.cos(((2 * Math.PI) / 12) * i - Math.PI / 2 + Math.PI / 6)
-              }
-              y={
-                textRadius *
-                Math.sin(((2 * Math.PI) / 12) * i - Math.PI / 2 + Math.PI / 6)
-              }>
-              {h + 1}
-            </Text>
-          ))} */}
+          <Circle cx="0" cy="0" r={r - stroke / 2} fill="url(#grad)" />
+
+          <Text
+            fill="#fff"
+            fontSize="22"
+            fontWeight="bold"
+            x={0}
+            y={0}
+            textAnchor="middle">
+            JUNE 29,
+          </Text>
+          <Text
+            fill="#fff"
+            fontSize="22"
+            fontWeight="bold"
+            x={0}
+            y={30}
+            textAnchor="middle">
+            2021
+          </Text>
         </G>
       </G>
     );

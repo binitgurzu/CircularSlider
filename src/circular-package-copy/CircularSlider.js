@@ -143,6 +143,21 @@ export default class CircularSlider extends PureComponent {
           newAngleLength += 2 * Math.PI;
         }
 
+        if (
+          angleLength >= 0 &&
+          angleLength < 3 &&
+          newAngleLength <= 6.5 &&
+          newAngleLength >= 4
+        ) {
+          return;
+        } else if (
+          angleLength >= 4 &&
+          newAngleLength >= 0 &&
+          newAngleLength <= 2
+        ) {
+          return;
+        }
+
         onUpdate({startAngle, angleLength: newAngleLength});
       },
     });
@@ -207,8 +222,8 @@ export default class CircularSlider extends PureComponent {
         style={{
           width: Dimensions.get('window').width,
           height: Dimensions.get('window').height / 2,
-          justifyContent:'center',
-          alignItems:'center',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
         onLayout={this.onLayout}>
         <Svg

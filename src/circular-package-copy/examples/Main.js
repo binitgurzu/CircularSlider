@@ -56,8 +56,8 @@ function padMinutes(min) {
 
 export default class Bedtime extends Component {
   state = {
-    startAngle: (Math.PI * 10) / 6,
-    angleLength: (Math.PI * 7) / 6,
+    startAngle: (Math.PI * 3) / 2,
+    angleLength: (Math.PI * 0) / 6,
   };
 
   onTimeUpdate = (fromTimeInMinutes, minutesLong) => {
